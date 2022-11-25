@@ -30,6 +30,6 @@ namespace Business.Constans
         public static string SuccessfulLogin = "Başarılı giriş";
         public static string UserAlreadyExists = "Kullanıcı mevcut";
 
-        public static string AccessTokenCreated = "Erişim Token'i oluşturuldu";
+        public static string AccessTokenCreated = "Giriş Yapıldı";
     }
 }
