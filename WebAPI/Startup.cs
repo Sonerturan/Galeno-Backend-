@@ -83,10 +83,12 @@ namespace WebAPI
             app.ConfigureCustomExceptionMiddleware();
 
             //Üstte yazılı olan login işlemlerinde hak sahibi olur
+            //bu yüzden bir cors da dizi mantığı ile iki adres belirliyoruz
             //cors hatasını düzeltmek için launchSettings.json klasöründen windowsAuthentication:true yap !
 
-            app.UseCors(builder => builder.WithOrigins("https://galeno.com.tr").AllowAnyHeader());
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200","https://galeno.com.tr").AllowAnyHeader());
+            //app.UseCors(builder => builder.WithOrigins("https://galeno.com.tr").AllowAnyHeader());
+            
 
             app.UseHttpsRedirection();
 
